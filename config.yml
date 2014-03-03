@@ -215,6 +215,7 @@ realistic_biomes:
 
   #----------------------------------------
 
+
   tree:
    base_rate: 0.08
    needs_sunlight: true
@@ -254,6 +255,22 @@ realistic_biomes:
    max_soil_layers: 0
    biomes:
     hot_rainy: 1.0
+	
+  ACACIA:
+   inherit: tree
+   biomes:
+    hot_dry: 2.0
+	PLAINS: 1.0
+    mushroom: 0.0
+    freshwater: 0.0
+
+  DARK_OAK:
+   inherit: tree
+   biomes:
+    forest: 2.0
+    cold_forest: 1.0
+    mushroom: 0.0
+    freshwater: 0.0
 
   #......................
 
