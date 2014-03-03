@@ -260,7 +260,7 @@ realistic_biomes:
    inherit: tree
    biomes:
     hot_dry: 2.0
-	PLAINS: 1.0
+    PLAINS: 1.0
     mushroom: 0.0
     freshwater: 0.0
 
