@@ -20,6 +20,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.untamedears.realisticbiomes.listener.FieldPestListener;
 import com.untamedears.realisticbiomes.listener.GrowListener;
 import com.untamedears.realisticbiomes.listener.PlayerListener;
 import com.untamedears.realisticbiomes.listener.SpawnListener;
@@ -344,6 +345,7 @@ public class RealisticBiomes extends JavaPlugin implements Listener {
 			pm.registerEvents(new GrowListener(this, materialGrowth), this);
 			pm.registerEvents(new SpawnListener(materialGrowth, fishDrops), this);
 			pm.registerEvents(new PlayerListener(this, materialGrowth), this);
+			pm.registerEvents(new FieldPestListener(this, materialGrowth), this);
 		}
 		catch(Exception e)
 		{

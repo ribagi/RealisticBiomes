@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.logging.Logger;
 
 import org.bukkit.Material;
@@ -43,6 +44,8 @@ public class GrowthConfig extends BaseConfig {
 	private double soilBonusPerLevel;
 	// the z levels below the actual growth event location in which to start looking for the correct soil
 	private int soilLayerOffset;
+	
+	private double pestProbability;
 
 	// conversion used for persistence calculations
 	private static final int SEC_PER_HOUR = 60 * 60;
@@ -97,6 +100,8 @@ public class GrowthConfig extends BaseConfig {
 		soilMaxLayers = 0;
 		soilBonusPerLevel = 0.0;
 		soilLayerOffset = 1;
+		
+		pestProbability = 0.0;
 	}
 	
 	// make a copy of the given configuration
@@ -153,6 +158,9 @@ public class GrowthConfig extends BaseConfig {
 		
 		if (config.isSet("soil_layer_offset"))
 			soilLayerOffset = config.getInt("soil_layer_offset");
+		
+		if (config.isSet("pest_probability"))
+			pestProbability = config.getDouble("pest_probability");
 		
 		if (config.isSet("biomes"))
 			loadBiomes(config.getConfigurationSection("biomes"), biomeAliases);
@@ -272,5 +280,10 @@ public class GrowthConfig extends BaseConfig {
 		rate *= (1.0 + soilBonus);
 		
 		return rate;
+	}
+	
+	public boolean testPest() {
+		Random gen = new Random();
+		return gen.nextDouble() < pestProbability;
 	}
 }
