@@ -84,6 +84,7 @@ realistic_biomes:
    # the relative z-level at which to start looking for soil blocks, in this example the column will start
    # 2 blocks below the crop block, ie beneath both itself and the farmland block
    soil_layer_offset: 2
+   pest_probability: 0.001
 
   # wheat
   CROPS:
