@@ -39,6 +39,8 @@ public class RealisticBiomes extends JavaPlugin implements Listener {
 
 	private static HashMap<TreeType, TreeType> treeTypeMap;
 	
+	
+	//Review this when new treeType is added within Bukkit.
 	static {
 		treeTypeMap = new HashMap<TreeType, TreeType>();
 		
