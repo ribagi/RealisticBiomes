@@ -381,12 +381,15 @@ realistic_biomes:
     mushroom: 1.0
 
   RABBIT:
+   needs_sunlight: false
    inherit: animal
    biomes:
     temperate: 1.0
-    mountain: 0.5
-    cold: 0.25
-    hot_dry: 0.25
+    mountain: 1.0
+    cold: 1.0
+    hot_dry: 1.0
+    hot_rainy: 1.0
+    SWAMPLAND: 1.0
   #---------------------------------------
 
  fish_drops:
